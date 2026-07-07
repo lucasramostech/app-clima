@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App de Clima</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center justify-center mt-20">
+  <form class="flex gap-2 w-full max-w-md mx-auto" id="weatherForm">
+    <input
+      type="text"
+      id="cityName"
+      placeholder="Digite o nome da cidade"
+      class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    <button
+      type="submit"
+      id="botaoBuscar"
+      class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">
+      Buscar Clima
+    </button>
+  </form>
+
+  <main class="max-w-[900px] mx-auto mt-6 px-4">
+    <div id="weather">
+      <div id="container-up" class="flex justify-between items-center gap-6 flex-wrap p-8">
+        <div class="sub-left flex items-center gap-4">
+          <div class="sun text-5xl">☀️</div>
+          <div class="temp-box">
+            <div class="temp text-4xl font-bold">28°C</div>
+            <div class="city text-sm text-gray-400">São Paulo, SP</div>
+          </div>
+        </div>
+
+
+        <div class="sub-right flex items-center gap-6">
+
+          <div class="info-box flex gap-x-6 mr-6">
+            <div class="umidity flex">
+              <div class="umidity-logo text-2xl">💧</div>
+              <div class="box-sub-info">
+                <div class="umidity-porcentage text-sm font-semibold">60%</div>
+                <div class="umidity-name text-gray-400 text-sm">Umidade</div>
+              </div>
+            </div>
+
+
+            <div class="air-speed flex">
+              <div class="air-logo text-2xl">💨</div>
+              <div class="box-sub-info2">
+                <div class="air-speed text-sm font-semibold">12km/h</div>
+                <div class="air-name text-gray-400 text-sm">Vento</div>
+              </div>
+            </div>
+
+
+
+            <div class="max-min-temp flex">
+              <div class="temp-logo text-2xl">🌡️</div>
+              <div class="box-sub-info3">
+                <div class="flex gap-x-4">
+                  <div class="temp-max text-sm font-semibold">31° /</div>
+                  <div class="temp-min text-sm font-semibold">21°</div>
+                </div>
+                <div class="temp-name text-gray-400 text-sm">Max / Min</div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      
+
+      <div id="container-down" class="flex gap-4 flex-wrap justify-center mt-6">
+        <div class="card flex-1 min-w-[140px] p-5 text-center">
+          <div class="day-name font-bold">Segunda</div>
+          <div class="day-date text-sm text-gray-400">20 Mai</div>
+          <div class="day-logo text-4xl">☀️</div>
+          <div class="box-sub-info4 flex justify-center gap-x-2">
+            <div class="day-max">31°</div>
+            <div class="day-min">21°</div>
+          </div>
+          <div class="day-desc text-sm text-gray-400">Ensolarado</div>
+        </div>
+
+        <div class="card flex-1 min-w-[140px] p-5 text-center">
+          <div class="day-name font-bold">Terça</div>
+          <div class="day-date text-sm text-gray-400">21 Mai</div>
+          <div class="day-logo text-4xl">⛅</div>
+          <div class="box-sub-info4 flex justify-center gap-x-2">
+            <div class="day-max">29°</div>
+            <div class="day-min">20°</div>
+          </div>
+          <div class="day-desc text-sm text-gray-400">Parcialmente nublado</div>
+        </div>
+
+        <div class="card flex-1 min-w-[140px] p-5 text-center">
+          <div class="day-name font-bold">Quarta</div>
+          <div class="day-date text-sm text-gray-400">22 Mai</div>
+          <div class="day-logo text-4xl">🌧️</div>
+          <div class="box-sub-info4 flex justify-center gap-x-2">
+            <div class="day-max">27°</div>
+            <div class="day-min">19°</div>
+          </div>
+          <div class="day-desc text-sm text-gray-400">Chuva leve</div>
+        </div>
+
+        <div class="card flex-1 min-w-[140px] p-5 text-center">
+          <div class="day-name font-bold">Quinta</div>
+          <div class="day-date text-sm text-gray-400">23 Mai</div>
+          <div class="day-logo text-4xl">⛅</div>
+          <div class="box-sub-info4 flex justify-center gap-x-2">
+            <div class="day-max">28°</div>
+            <div class="day-min">20°</div>
+          </div>
+          <div class="day-desc text-sm text-gray-400">Parcialmente nublado</div>
+        </div>
+
+        <div class="card flex-1 min-w-[140px] p-5 text-center">
+          <div class="day-name font-bold">Sexta</div>
+          <div class="day-date text-sm text-gray-400">24 Mai</div>
+          <div class="day-logo text-4xl">☀️</div>
+          <div class="box-sub-info4 flex justify-center gap-x-2">
+            <div class="day-max">30°</div>
+            <div class="day-min">21°</div>
+          </div>
+          <div class="day-desc text-sm text-gray-400">Ensolarado</div>
+        </div>
+      </div>
+      </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/weatherCodes.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  
+</body>
+</html>
