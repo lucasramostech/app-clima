@@ -6,7 +6,7 @@ function carregarFavoritos() {
     const listaFavoritos = JSON.parse(localStorage.getItem('favoritos')) || []
 
     listaFavoritos.forEach(function(cidade) {
-        historic.innerHTML += `<button type="button" class="sub-favoritos rounded-xl min-h-[4rem] min-w-[15rem] flex items-center justify-center font-serif text-gray-600 mr-4 ml-4 mt-4 mg-4">${cidade}</button>`
+        historic.innerHTML += `<button type="button" class="sub-favoritos rounded-xl min-h-[4rem] flex items-center justify-center font-serif text-gray-600">${cidade}</button>`
     })
 }
 
@@ -36,7 +36,7 @@ function favoritosPressionado() {
     // Função que injeta o html dentro do favoritos
     function favoritosLista() {
         const historic = document.querySelector('#historic')
-        historic.innerHTML += `<button type="button" class="sub-favoritos rounded-xl min-h-[4rem] min-w-[15rem] flex items-center justify-center font-serif text-gray-600 mr-4 ml-4 mt-4 mg-4">${cidadeFavorita}</button>`
+        historic.innerHTML += `<button type="button" class="sub-favoritos rounded-xl min-h-[4rem] flex items-center justify-center font-serif text-gray-600">${cidadeFavorita}</button>`
     }
 }
 

@@ -33,11 +33,17 @@ body {
     display: none;
 }
 
+.info-box {
+    flex-wrap: wrap;
+}
+
 #historic {
     background: #fff;
     border: none;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     padding: 0.5rem 0 1rem;
+    background-color: #bad9f8;
+    width: 18rem;
 }
 
 .sub-favoritos {
@@ -45,9 +51,33 @@ body {
     border: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     transition: transform 0.15s ease, background-color 0.15s ease;
+    width: 90%;
+    max-width: 250px;
+    margin: 0.5rem auto;
 }
 
 .sub-favoritos:hover {
     background-color: #eaf1fb;
     transform: translateY(-2px);
+}
+
+
+@media (max-width:480px){
+    #weather {
+        width: 80vw;
+    }
+
+    #container-up, #container-down {
+        display: block;
+    }
+
+    .info-box {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding-top: 2vh;
+        gap: 2rem;
+    }
+
+    
 }
