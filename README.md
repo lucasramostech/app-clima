@@ -20,6 +20,7 @@ Nesta versão, além dos dados reais da API conectados à interface, o app ganho
 - Botão "⭐ Favoritar" para salvar a cidade pesquisada na lista de favoritos.
 - Favoritos persistidos no `localStorage`, exibidos num painel lateral e restaurados automaticamente ao recarregar a página.
 - Clique em uma cidade favorita refaz a busca do clima para ela.
+- Layout responsivo e operante
 
 ## Tecnologias
 

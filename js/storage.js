@@ -28,7 +28,6 @@ function favoritosPressionado() {
         listaFavoritos.push(cidadeFavorita)
 
         localStorage.setItem('favoritos', JSON.stringify(listaFavoritos))
-        console.log(listaFavoritos)
 
         favoritosLista()
     }
