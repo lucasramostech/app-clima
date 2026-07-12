@@ -4,9 +4,9 @@ Aplicação web de clima que busca a previsão de qualquer cidade em tempo real,
 
 Acesse: https://app-clima-lucasramostech.vercel.app/
 
-## Status: v2.0
+## Status: v3.0
 
-Nesta versão, os dados reais da API já estão conectados à interface. A busca retorna o clima atual e a previsão dos próximos dias, exibidos com emoji e descrição de acordo com o código de clima (WMO) retornado pela API.
+Nesta versão, além dos dados reais da API conectados à interface, o app ganhou um estado de carregamento e um sistema de cidades favoritas persistido no navegador via `localStorage`.
 
 ### Funcionalidades
 
@@ -16,6 +16,10 @@ Nesta versão, os dados reais da API já estão conectados à interface. A busca
 - Tratamento de erro (cidade não encontrada / falha na busca) com alerta ao usuário.
 - Dados reais da API exibidos no clima atual (temperatura, umidade, vento, máx/mín) e nos cards de previsão.
 - Tradução dos códigos de clima (`weather_code`) da API em emoji e descrição (`ui.js`).
+- Indicador de "Carregando..." exibido enquanto a busca está em andamento.
+- Botão "⭐ Favoritar" para salvar a cidade pesquisada na lista de favoritos.
+- Favoritos persistidos no `localStorage`, exibidos num painel lateral e restaurados automaticamente ao recarregar a página.
+- Clique em uma cidade favorita refaz a busca do clima para ela.
 
 ## Tecnologias
 
@@ -35,6 +39,7 @@ js/
   api.js
   weatherCodes.js
   ui.js
+  storage.js
 ```
 
 ## Como rodar
@@ -47,8 +52,9 @@ Basta abrir o arquivo `index.html` direto no navegador, não precisa de servidor
 
 ## Como funciona
 
-1. `main.js` escuta o clique no botão de busca e valida se o campo não está vazio.
-2. `api.js` converte o nome da cidade em latitude/longitude (API de geocoding) e busca o clima atual e a previsão dos próximos dias (API de forecast).
-3. `weatherCodes.js` organiza os dados retornados num único objeto `clima` e chama `MostrarClima`.
-4. `ui.js` atualiza o DOM: temperatura, umidade, vento, máx/mín, emoji do dia atual e os 5 cards de previsão exibidos na interface.
+1. `main.js` valida o input e dispara a busca (`RastrearTemp`), tanto pelo formulário quanto pelo clique em um favorito.
+2. `api.js` converte a cidade em coordenadas e busca o clima atual e a previsão na Open-Meteo.
+3. `weatherCodes.js` organiza os dados numa única estrutura e chama `MostrarClima`.
+4. `ui.js` atualiza o DOM com os dados do clima e exibe o resultado.
+5. `storage.js` cuida dos favoritos: salva no `localStorage` e os restaura ao recarregar a página.
 

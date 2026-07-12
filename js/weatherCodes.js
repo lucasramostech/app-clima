@@ -25,7 +25,7 @@ function DadosAPI(data) {
             codigoClima: data.daily.weather_code[i]
         })
     }
-
+    
    
     // Coloca as variáveis dentro de um objeto unificado
     const clima = {
@@ -40,8 +40,6 @@ function DadosAPI(data) {
         previsao
     }
     
-    
     MostrarClima(clima)
-
     return clima
 }

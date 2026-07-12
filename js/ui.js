@@ -25,6 +25,7 @@ function MostrarClima(clima) {
     })
     solHoje.textContent = codigosClima[casoClimaHoje].emoji
 
+    // Chamando os querySelector e trocando no DOM
     const temp = document.querySelector('.temp')
     const umidade = document.querySelector('.umidity-porcentage')
     const vento = document.querySelector('.air-speed')
@@ -37,7 +38,7 @@ function MostrarClima(clima) {
     tempMax.textContent = clima.maxima + "° /"
     tempMin.textContent = clima.minima + "°"
 
-    // Pega os cards todos
+
     const cards = document.querySelectorAll('.card')
 
     // Coloca os códigos dos climas dentro de um array para mecanismo de emojis
@@ -79,5 +80,9 @@ function MostrarClima(clima) {
             textoEmoji[i].textContent = codigosClima[casoClima].nome
         })
     }
+
+
+    const display = document.querySelector("#weather")
+    display.style.display = "block"
 }
 
