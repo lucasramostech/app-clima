@@ -22,6 +22,7 @@ Nesta versão, além dos dados reais da API conectados à interface, o app ganho
 - Clique em uma cidade favorita refaz a busca do clima para ela.
 - Layout responsivo e operante
 
+
 ## Tecnologias
 
 - HTML
