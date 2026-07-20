@@ -4,9 +4,9 @@ Aplicação web de clima que busca a previsão de qualquer cidade em tempo real,
 
 Acesse: https://app-clima-lucasramostech.vercel.app/
 
-## Status: v3.0
+## Status: v3.1
 
-Nesta versão, além dos dados reais da API conectados à interface, o app ganhou um estado de carregamento e um sistema de cidades favoritas persistido no navegador via `localStorage`.
+Nesta versão, além dos dados reais da API conectados à interface, o app ganhou um estado de carregamento, um sistema de cidades favoritas persistido no navegador via `localStorage` e um novo visual escuro com efeito de vidro fosco (glassmorphism).
 
 ### Funcionalidades
 
@@ -21,7 +21,7 @@ Nesta versão, além dos dados reais da API conectados à interface, o app ganho
 - Favoritos persistidos no `localStorage`, exibidos num painel lateral e restaurados automaticamente ao recarregar a página.
 - Clique em uma cidade favorita refaz a busca do clima para ela.
 - Layout responsivo e operante
-
+- Tema escuro com variáveis de cor centralizadas em `:root` (`style.css`), fácil de customizar
 
 ## Tecnologias
 
@@ -59,4 +59,3 @@ Basta abrir o arquivo `index.html` direto no navegador, não precisa de servidor
 3. `weatherCodes.js` organiza os dados numa única estrutura e chama `MostrarClima`.
 4. `ui.js` atualiza o DOM com os dados do clima e exibe o resultado.
 5. `storage.js` cuida dos favoritos: salva no `localStorage` e os restaura ao recarregar a página.
-
