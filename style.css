@@ -1,6 +1,6 @@
 :root {
     --cor-fundo-principal: #0f1420;
-    --cor-fundo-secundario: #c2c9dd;
+    --cor-fundo-secundario: #9bb1f0;
     --cor-fundo-terciario: #1e2740;
     --cor-fundo-card: rgba(255, 255, 255, 0.05);
     --cor-borda-card: rgba(255, 255, 255, 0.08);
@@ -9,6 +9,7 @@
     --cor-destaque: #818cf8;
     --cor-destaque-hover: #6366f1;
     --cor-sombra: rgba(0, 0, 0, 0.45);
+    --cor-legenda: #6366f1;
 }
 
 body {
@@ -88,6 +89,10 @@ body {
     transform: translateY(-2px);
 }
 
+.day-desc {
+    color: #000000;
+}
+
 #cityName {
     background: var(--cor-fundo-card);
     color: var(--cor-texto-principal);
@@ -95,7 +100,7 @@ body {
 }
 
 #cityName::placeholder {
-    color: var(--cor-texto-secundario);
+    color: var(--cor-texto-principal);
 }
 
 #cityName:focus {
