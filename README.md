@@ -4,7 +4,7 @@ Aplicação web de clima que busca a previsão de qualquer cidade em tempo real,
 
 Acesse: https://app-clima-lucasramostech.vercel.app/
 
-## Status: v3.1
+## Status: v3.2
 
 Nesta versão, além dos dados reais da API conectados à interface, o app ganhou um estado de carregamento, um sistema de cidades favoritas persistido no navegador via `localStorage` e um novo visual escuro com efeito de vidro fosco (glassmorphism).
 
@@ -22,6 +22,7 @@ Nesta versão, além dos dados reais da API conectados à interface, o app ganho
 - Clique em uma cidade favorita refaz a busca do clima para ela.
 - Layout responsivo e operante
 - Tema escuro com variáveis de cor centralizadas em `:root` (`style.css`), fácil de customizar
+- Background de vídeo (infinito)
 
 ## Tecnologias
 
