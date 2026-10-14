@@ -7,13 +7,13 @@
     --cor-borda-card: rgba(125, 169, 230, 0.42);
     --cor-borda-destaque: rgba(255, 200, 87, 0.55);
     --cor-texto-principal: #f5f7fc;
-    --cor-texto-secundario: #aebbd1;
+    --cor-texto-secundario: #ffffff;
     --cor-texto-escuro: #081326;
     --cor-destaque: #ffc857;
     --cor-destaque-hover: #ffda7a;
     --cor-destaque-suave: rgba(255, 200, 87, 0.14);
     --cor-sombra: rgba(0, 0, 0, 0.48);
-    --cor-legenda: #ffd36a;
+    --cor-legenda: #ffffff;
     --cor-brilho-destaque: rgba(255, 200, 87, 0.4);
     --cor-brilho-borda: rgba(105, 160, 235, 0.4);
 }
@@ -48,7 +48,7 @@ body {
     z-index: -1;
 }
 
-.video-background video {
+.video-background img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -87,9 +87,9 @@ body {
     backdrop-filter: blur(20px);
 }
 
-.sub-favoritos {
+#historic .sub-favoritos {
     background: var(--cor-fundo-card);
-    color: var(--cor-texto-principal);
+    color: #fff;
     border: 1px solid var(--cor-borda-card);
     box-shadow: 0 2px 8px var(--cor-sombra), 0 0 10px var(--cor-brilho-borda);
     transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
@@ -109,6 +109,13 @@ body {
 
 .day-desc {
     color: var(--cor-texto-secundario);
+}
+
+.umidity-name,
+.air-name,
+.temp-name,
+#loading {
+    color: var(--cor-texto-principal);
 }
 
 .city {
@@ -145,14 +152,14 @@ body {
 
 #botaoFavoritos {
     border-color: var(--cor-borda-card);
-    color: var(--cor-texto-secundario);
+    color: #fff;
     box-shadow: 0 0 10px var(--cor-brilho-borda);
 }
 
 #botaoFavoritos:hover {
     background: var(--cor-fundo-card);
     border-color: var(--cor-destaque);
-    color: var(--cor-destaque);
+    color: #fff;
     box-shadow: 0 0 14px var(--cor-brilho-destaque);
 }
 
